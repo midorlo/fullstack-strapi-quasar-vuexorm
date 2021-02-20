@@ -13,3 +13,12 @@ module.exports = ({ env }) => ({
     },
   },
 });
+// module.exports = ({ env }) => ({
+//   connections: {
+//     default: {
+//       settings: {
+//         password: env('DATABASE_PASSWORD'),
+//       },
+//     },
+//   },
+// });
