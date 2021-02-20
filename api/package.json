@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "API Module for the Template",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "strapi develop --watch-admin",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
@@ -31,9 +31,6 @@
   },
   "author": {
     "name": "midorlo"
-  },
-  "strapi": {
-    "uuid": "5afcb057-9c2f-4e63-bb35-0e3e41bad03e"
   },
   "engines": {
     "node": ">= 10.18.1",
