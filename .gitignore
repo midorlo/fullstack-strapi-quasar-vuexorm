@@ -1,9 +1,5 @@
-.DS_Store
-.thumbs.db
-node_modules
-
 # Quasar core related directories
-.quasar
+**/.quasar
 **/store-flag.d.ts
 **/dist/*
 
@@ -32,3 +28,15 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+# Operating System
+.DS_Store
+.thumbs.db
+node_modules
+
+# Strapi
+.env
+.strapi-updater.json
+**/.cache
+**/build
+**/exports

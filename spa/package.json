@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-strapi-quasar-vuexorm",
+  "name": "spa",
   "version": "0.0.1",
   "description": "Template for new Projects",
   "productName": "Template: Fullstack+Strapi+Quasar+VuexORM",
@@ -40,5 +40,6 @@
     "node": ">= 10.18.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  }
+  },
+  "license": "MIT"
 }
