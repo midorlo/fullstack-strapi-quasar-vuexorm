@@ -15,7 +15,7 @@ Vue.use(Vuex)
  */
 
 export default function (/* { ssrContext } */) {
-  const Store = new Vuex.Store({
+  return new Vuex.Store({
     modules: {
       // example
     },
@@ -24,6 +24,4 @@ export default function (/* { ssrContext } */) {
     // for dev mode only
     strict: process.env.DEBUGGING
   })
-
-  return Store
 }
