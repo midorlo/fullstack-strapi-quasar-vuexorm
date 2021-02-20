@@ -6,6 +6,8 @@
   "author": "midorlo",
   "private": true,
   "scripts": {
+    "develop": "quasar dev",
+    "build": "quasar build",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
