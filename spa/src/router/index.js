@@ -15,7 +15,7 @@ Vue.use(VueRouter)
  */
 
 export default function (/* { store, ssrContext } */) {
-  return new VueRouter({
+  const opts = {
     scrollBehavior: () => ({x: 0, y: 0}),
     routes,
 
@@ -24,5 +24,6 @@ export default function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> publicPath
     mode: process.env.VUE_ROUTER_MODE,
     base: process.env.VUE_ROUTER_BASE
-  })
+  }
+  return new VueRouter(opts)
 }

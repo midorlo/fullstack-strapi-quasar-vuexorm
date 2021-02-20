@@ -15,7 +15,7 @@ Vue.use(Vuex)
  */
 
 export default function (/* { ssrContext } */) {
-  return new Vuex.Store({
+  const opts = {
     modules: {
       // example
     },
@@ -23,5 +23,6 @@ export default function (/* { ssrContext } */) {
     // enable strict mode (adds overhead!)
     // for dev mode only
     strict: process.env.DEBUGGING
-  })
+  }
+  return new Vuex.Store(opts)
 }
