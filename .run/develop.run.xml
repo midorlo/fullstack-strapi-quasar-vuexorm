@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="develop" type="CompoundRunConfigurationType">
+    <toRun name="develop-quasar" type="js.build_tools.npm" />
+    <toRun name="develop-strapi" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>
