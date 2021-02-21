@@ -9,8 +9,8 @@
       v-for="article in articles"
       :key="article.id"
       :title="article.title"
-      :subtitle="article.published_at">
-
+      :subtitle="article.published_at"
+      @click="onClick(article)">
       {{ article.content }}
     </q-timeline-entry>
   </q-timeline>
@@ -27,6 +27,11 @@ export default {
      */
     articles() {
       return Article.all()
+    }
+  },
+  methods: {
+    onClick(article) {
+      this.$router.push({ name: 'article', params: { id: article.id} })
     }
   }
 }

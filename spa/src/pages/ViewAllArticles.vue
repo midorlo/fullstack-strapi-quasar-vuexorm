@@ -19,7 +19,7 @@ export default {
     ArticleList
   },
   async created() {
-    await Article.fetch()
+    await Article.fetchAll()
   },
 }
 </script>

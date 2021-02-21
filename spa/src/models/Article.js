@@ -14,8 +14,12 @@ export default class Article extends Model {
     }
   }
 
-  static async fetch() {
+  static async fetchAll() {
     return Article.api().get(this.entites)
+  }
+
+  static async fetchOne(id) {
+    return Article.api().get(this.entites + "/" + id)
   }
 }
 
