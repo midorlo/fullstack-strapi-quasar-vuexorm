@@ -70,12 +70,10 @@ module.exports = function (/* ctx */) {
       port: 8080,
       open: false
     },
-
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
       iconSet: 'material-icons',
       lang: 'en-us',
-      config: {},
 
       // * 'auto' - (DEFAULT) Auto-import needed Quasar components & directives
       // * 'all'  - Manually specify what to import
@@ -89,7 +87,12 @@ module.exports = function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Loading'
+      ],
+      config: {
+        loading: { /* look at QUASARCONFOPTIONS from the API card (bottom of page) */ }
+      }
     },
 
     // https://quasar.dev/options/animations

@@ -25,6 +25,5 @@ export default function (/* { store, ssrContext } */) {
     mode: process.env.VUE_ROUTER_MODE,
     base: process.env.VUE_ROUTER_BASE
   }
-  const router = new VueRouter(opts)
-  return router
+  return new VueRouter(opts)
 }

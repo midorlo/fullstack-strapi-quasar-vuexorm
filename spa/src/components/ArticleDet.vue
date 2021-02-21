@@ -55,7 +55,9 @@ export default {
   },
   methods: {
     update(article) {
+      this.$q.loading.show()
       Article.updateRecord(article)
+      this.$q.loading.hide()
     },
     remove(article) {
       console.log(article)

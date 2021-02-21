@@ -1,30 +1,17 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+    <q-header></q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
+      side="left"
       bordered
       content-class="bg-grey-1"
     >
+    <q-toolbar class="titlebar">
+          K     <q-btn flat icon="redo" aria-label="Menu" @click="leftDrawerOpen = !leftDrawerOpen"/> 9
+    </q-toolbar>
       <q-list>
         <q-item-label
           header
@@ -38,10 +25,12 @@
           v-bind="link"
         />
       </q-list>
+
+
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view/>
     </q-page-container>
   </q-layout>
 </template>
@@ -75,6 +64,66 @@ const linksData = [
     link: 'https://forum.quasar.dev'
   },
   {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
+    title: 'Forum',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev'
+  },
+  {
     title: 'Twitter',
     caption: '@quasarframework',
     icon: 'rss_feed',
@@ -96,12 +145,19 @@ const linksData = [
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
-  data () {
+  components: {EssentialLink},
+  data() {
     return {
-      leftDrawerOpen: false,
+      leftDrawerOpen: true,
       essentialLinks: linksData
     }
-  }
+  },
+  methods: {}
 }
 </script>
+<style type="text/css">
+.titlebar {
+  background-color: #1976D2;
+  color: #eeeeee;
+}
+</style>
