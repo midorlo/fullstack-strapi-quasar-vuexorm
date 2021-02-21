@@ -1,22 +1,19 @@
 {
-  "name": "spa",
-  "version": "0.0.1",
-  "description": "Template for new Projects",
-  "productName": "Template: Fullstack+Strapi+Quasar+VuexORM",
   "author": "midorlo",
-  "private": true,
-  "scripts": {
-    "develop": "quasar dev",
-    "build": "quasar build",
-    "lint": "eslint --ext .js,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
-  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "last 2 Safari versions",
+    "last 2 Android versions"
+  ],
   "dependencies": {
     "@quasar/extras": "^1.9.17",
     "axios": "^0.21.1",
     "core-js": "^3.9.0",
     "quasar": "^1.15.4"
   },
+  "description": "Template for new Projects",
   "devDependencies": {
     "@quasar/app": "^2.1.15",
     "autoprefixer": "@9.8.6",
@@ -29,17 +26,20 @@
     "vue-router": "@3.2.0",
     "vuex": "@3.6.0"
   },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "last 2 Firefox versions",
-    "last 2 Edge versions",
-    "last 2 Safari versions",
-    "last 2 Android versions"
-  ],
   "engines": {
     "node": ">= 10.18.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "name": "spa",
+  "private": true,
+  "productName": "Template: Fullstack+Strapi+Quasar+VuexORM",
+  "scripts": {
+    "develop": "quasar dev",
+    "build": "quasar build",
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "version": "0.0.1"
 }

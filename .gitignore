@@ -37,6 +37,7 @@ node_modules
 # Strapi
 .env
 .strapi-updater.json
-**/.cache
 **/build
 **/exports
+/api/.tmp/
+/api/.cache/
