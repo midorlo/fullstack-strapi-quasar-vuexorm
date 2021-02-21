@@ -1,25 +1,36 @@
 <template>
-  <q-card flat square bordered>
-    <q-form>
-    <q-card-section>
-      <q-item-label>
-        <q-input v-model="article.title" label="Title"></q-input>
-      </q-item-label>
-    </q-card-section>
-    <q-card-section>
-      <q-input v-model="article.published_at" label="Published"></q-input>
-    </q-card-section>
-    <q-card-section>
-      <q-input v-model="article.content" label="Content"></q-input>
-    </q-card-section>
-    <q-card-section>
-      <q-card-actions>
-        <q-btn label="Edit"></q-btn>
-        <q-btn label="Delete"></q-btn>
-      </q-card-actions>
-    </q-card-section>
-    </q-form>
-  </q-card>
+  <div>
+    <q-card flat>
+      <q-toolbar>
+        <q-toolbar-title>Editing Article {{ param.title }}</q-toolbar-title>
+      </q-toolbar>
+
+      <q-card-section>
+        <q-item-label>
+          <q-input v-model="article.title" label="Title"/>
+        </q-item-label>
+      </q-card-section>
+
+      <q-card-section>
+        <q-editor
+          square
+          flat
+          v-model=editor
+          max-height="100%"
+          toolbar-color="primary"
+        />
+      </q-card-section>
+
+    </q-card>
+    <q-footer>
+        <q-card-actions>
+          <q-btn unelevated label="Edit" @click="update(article)"></q-btn>
+          <q-btn unelevated label="Delete" @click="remove(article)"></q-btn>
+          <q-btn unelevated label="Cancel" @click="cancel()"></q-btn>
+        </q-card-actions>
+    </q-footer>
+  </div>
+
 </template>
 
 <script>
@@ -29,12 +40,25 @@ export default {
     param: {},
   },
   data: () => ({
-    article: {}
+    article: {},
+    editor: "undefined"
   }),
   watch: {
-    param: function (val) {
+    param: function () {
       this.article = this.param
+      this.editor = this.param.content
     },
   },
+  methods: {
+    update(article) {
+      console.log(article)
+    },
+    remove(article) {
+      console.log(article)
+    },
+    cancel() {
+      this.$router.back()
+    }
+  }
 }
 </script>

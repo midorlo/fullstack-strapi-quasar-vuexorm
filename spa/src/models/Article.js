@@ -1,4 +1,5 @@
 import { Model } from '@vuex-orm/core'
+import { date } from 'quasar'
 
 export default class Article extends Model {
 
@@ -20,6 +21,15 @@ export default class Article extends Model {
 
   static async fetchOne(id) {
     return Article.api().get(this.entites + "/" + id)
+  }
+
+  static mutators () {
+    return {
+      published_at (value) {
+        let timeStamp = Date.parse(value)
+        return  date.formatDate(timeStamp, 'YYYY-MM-DD HH:mm')
+      }
+    }
   }
 }
 
