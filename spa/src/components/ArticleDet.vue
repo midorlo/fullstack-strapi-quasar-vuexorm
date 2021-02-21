@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import Article from "src/models/Article";
 export default {
   name: "ArticleDet",
   props: {
@@ -48,10 +49,13 @@ export default {
       this.article = this.param
       this.editor = this.param.content
     },
+    editor: function () {
+      this.article.content = this.editor
+    }
   },
   methods: {
     update(article) {
-      console.log(article)
+      Article.updateRecord(article)
     },
     remove(article) {
       console.log(article)
