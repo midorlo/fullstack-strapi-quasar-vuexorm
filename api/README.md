@@ -1,3 +1,3 @@
-# Strapi application
+# References
 
-A quick description of your strapi application
+https://github.com/VirtusLab/strapi-plugin-comments
